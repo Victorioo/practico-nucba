@@ -42,10 +42,10 @@ header {
 /* hero */
 
 .hero-section {
-  background: rgb(6, 136, 113);
+  background: rgb(60, 60, 137);
   background: linear-gradient(
     45deg,
-    rgba(6, 136, 113, 1) 0%,
+    rgba(60, 60, 137, 1) 0%,
     rgba(0, 0, 0, 1) 100%
   );
 }
@@ -68,25 +68,25 @@ header {
 }
 
 .hero__title {
-  color: white;
+  color: #eee;
   font-size: 5rem;
   font-weight: 600;
 }
 
 .hero__title_container p {
   font-size: 1.2rem;
-  color: #fff;
+  color: #eee;
   font-weight: 300;
   width: 75%;
 }
 
 .lata {
-  width: 15rem;
+  width: 35rem;
 }
 
 .button-hero {
   color: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   border: none;
   font-weight: 500;
   font-size: 1rem;
@@ -97,11 +97,10 @@ header {
   cursor: pointer;
 }
 
-.button-hero:hover{
+.button-hero:hover {
   background-color: #333;
   color: #eee;
 }
-
 
 /* cards */
 
@@ -112,9 +111,10 @@ header {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  background-color: #222;
+  background-color: rgb(27, 27, 46);
   color: #eee;
-  height: 70vh;
+  padding: 3rem 0;
+  min-height: 70vh;
 }
 
 .card__title {
@@ -126,8 +126,7 @@ header {
   flex-flow: row wrap;
   gap: 1.5rem;
   justify-content: center;
-  align-items: stretch;
-  height: 50%;
+  align-items: center;
 }
 
 .card {
@@ -138,7 +137,8 @@ header {
   width: 20%;
   gap: 20px;
   padding: 1.5rem;
-  background-color: #0e0e0e;
+  background-color: #c1c1c1;
+  color: black;
   text-align: center;
   border-radius: 7px;
 }
@@ -155,14 +155,14 @@ header {
 
 .zombie-cards {
   position: absolute;
-  bottom: -3rem;
-  left: 2rem;
-  width: 15rem;
+  bottom: -1rem;
+  left: 0rem;
+  width: 13rem;
 }
 
 .logo-card {
   background-color: #3c3c89ff;
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 3rem;
 }
 
@@ -212,7 +212,7 @@ header {
     flex-flow: row wrap;
     align-items: center;
   }
-  
+
   .hero {
     justify-content: center;
     align-items: start;
@@ -228,9 +228,35 @@ header {
     font-size: 3rem;
   }
   .lata {
-    width: 7rem;
+    max-width: 15rem;
   }
 
+  .zombie-cards {
+    left: -2rem;
+    bottom: -5rem;
+    width: 10rem;
+  }
+
+  .cards-container {
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+   width: 75%;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .lata {
+    width: 15rem;
+  }
   .section {
     justify-content: start;
     height: 85vh;
@@ -257,8 +283,46 @@ header {
 }
 
 @media only screen and (min-width: 481px) and (max-width: 767px) {
+  .hero {
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero__title_container p {
+    font-size: 1.2rem;
+    width: 95%;
+  }
+  
   .lata {
-    width: 7rem;
+    max-width: 15rem;
+  }
+  .zombie-cards {
+    left: -2rem;
+    bottom: -5rem;
+    width: 10rem;
+  }
+
+  .cards-container {
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+   width: 75%;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .lata {
+    width: 15rem;
   }
 
   .section {
@@ -284,6 +348,26 @@ header {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .cards-container {
+    align-items: stretch;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .zombie-cards {
+    position: absolute;
+    bottom: -3rem;
+    left: 0rem;
+    width: 10rem;
+  }
+  .lata {
+    width: 15rem;
+  }
   .zombie {
     width: 15rem;
     right: 0;
