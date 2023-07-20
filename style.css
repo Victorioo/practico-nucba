@@ -17,6 +17,8 @@ body {
   font-family: "Poppins";
 }
 
+/* header */
+
 header {
   position: fixed;
   top: 0;
@@ -36,6 +38,8 @@ header {
 .links {
   color: #fff;
 }
+
+/* hero */
 
 .hero-container {
   background: rgb(6, 136, 113);
@@ -74,6 +78,12 @@ header {
   width: 75%;
 }
 
+.lata {
+  width: 15rem;
+}
+
+/* about */
+
 .section {
   background-color: rgb(23, 24, 24);
   border-bottom: 3px solid black;
@@ -85,18 +95,19 @@ header {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  height: 70vh;
+  align-items: start;
+  height: 60vh;
 }
 
 .about {
   display: flex;
   flex-flow: column wrap;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  text-align: center;
   gap: 10px;
+  max-width: 65%;
+  text-align: center;
+  padding: 3rem;
 }
 
 .about h1 {
@@ -104,7 +115,6 @@ header {
 }
 
 .about p {
-  width: 50%;
   font-size: 1.2rem;
 }
 
@@ -112,6 +122,66 @@ header {
   position: absolute;
   right: 5rem;
   bottom: 0;
+  width: 20rem;
+}
+
+/* animaciones */
+
+@media only screen and (max-width: 480px) {
+  
+  .hero__title_container p {
+    font-size: 1.2rem;
+    width: 95%;
+  }
+  .hero__title {
+    font-size: 3rem;
+  }
+  .lata {
+    width: 8rem;
+  }
+  .about-container {
+    height: 90vh;
+  }
+  .about h1 {
+    font-size: 2rem;
+  }
+
+  .about p {
+    font-size: 1.2rem;
+  }
+  .zombie {
+    width: 10rem;
+    right: 0;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .lata {
+    width: 10rem;
+  }
+
+  .about-container {
+    height: 90vh;
+  }
+  
+  .about h1 {
+    font-size: 2rem;
+  }
+
+  .about p {
+    font-size: 1.2rem;
+  }
+  .zombie {
+    width: 15rem;
+    right: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .zombie {
+    width: 15rem;
+    right: 0;
+  }
 }
 
 @keyframes float {
