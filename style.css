@@ -38,11 +38,11 @@ header {
 }
 
 .hero-container {
-  background: rgb(35, 39, 46);
+  background: rgb(6, 136, 113);
   background: linear-gradient(
-    157deg,
-    rgb(29, 29, 23) 58%,
-    rgba(255, 195, 23, 1) 90%
+    45deg,
+    rgba(6, 136, 113, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
   );
 }
 
