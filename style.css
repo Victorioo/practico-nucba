@@ -27,7 +27,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
 }
 
 .links-container {
@@ -102,20 +102,80 @@ header {
   color: #eee;
 }
 
-/* about */
 
-.section {
-  background-color: rgb(23, 24, 24);
-  border-bottom: 3px solid black;
-  color: #fff;
+/* cards */
+
+.card-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: #222;
+  color: #eee;
+  height: 70vh;
 }
 
-.section {
+.card__title {
+  font-size: 2rem;
+}
+
+.cards-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+  height: 50%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  gap: 20px;
+  padding: 1.5rem;
+  background-color: #0e0e0e;
+  text-align: center;
+  border-radius: 7px;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.card p {
+  font-weight: 400;
+}
+
+.zombie-cards {
+  position: absolute;
+  bottom: -3rem;
+  left: 2rem;
+  width: 15rem;
+}
+
+.logo-card {
+  background-color: #3c3c89ff;
+  padding: .5rem;
+  border-radius: 3rem;
+}
+
+/* About */
+
+.about-container {
   position: relative;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  align-items: start;
+  align-items: center;
+  background-color: rgb(60, 60, 137);
+  color: white;
 }
 
 .about {
@@ -126,8 +186,8 @@ header {
   gap: 10px;
   max-width: 55%;
   text-align: center;
-  padding: 3rem;
   height: 70vh;
+  padding: 10px;
 }
 
 .about h1 {
@@ -147,7 +207,19 @@ header {
 
 /* animaciones */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 481px) {
+  header {
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  
+  .hero {
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
   .hero__title_container p {
     font-size: 1.2rem;
     width: 95%;
@@ -156,12 +228,12 @@ header {
     font-size: 3rem;
   }
   .lata {
-    width: 8rem;
+    width: 7rem;
   }
 
   .section {
     justify-content: start;
-    height: 90vh;
+    height: 85vh;
   }
   .about {
     max-width: 100%;
@@ -186,7 +258,7 @@ header {
 
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .lata {
-    width: 10rem;
+    width: 7rem;
   }
 
   .section {
