@@ -26,6 +26,7 @@ header {
   background-color: #111;
   padding: 1rem 1.5rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -96,18 +97,18 @@ header {
   flex-flow: column wrap;
   justify-content: center;
   align-items: start;
-  height: 60vh;
 }
 
 .about {
   display: flex;
   flex-flow: column wrap;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   gap: 10px;
-  max-width: 65%;
+  max-width: 55%;
   text-align: center;
   padding: 3rem;
+  height: 70vh;
 }
 
 .about h1 {
@@ -120,7 +121,7 @@ header {
 
 .zombie {
   position: absolute;
-  right: 5rem;
+  right: 1rem;
   bottom: 0;
   width: 20rem;
 }
@@ -128,7 +129,6 @@ header {
 /* animaciones */
 
 @media only screen and (max-width: 480px) {
-  
   .hero__title_container p {
     font-size: 1.2rem;
     width: 95%;
@@ -139,9 +139,16 @@ header {
   .lata {
     width: 8rem;
   }
+
   .about-container {
+    justify-content: start;
     height: 90vh;
   }
+  .about {
+    max-width: 100%;
+    z-index: 1;
+  }
+
   .about h1 {
     font-size: 2rem;
   }
@@ -149,9 +156,12 @@ header {
   .about p {
     font-size: 1.2rem;
   }
+
   .zombie {
     width: 10rem;
     right: 0;
+    z-index: -1;
+    opacity: 1;
   }
 }
 
@@ -161,9 +171,14 @@ header {
   }
 
   .about-container {
+    justify-content: start;
     height: 90vh;
   }
-  
+
+  .about {
+    max-width: 100%;
+  }
+
   .about h1 {
     font-size: 2rem;
   }
@@ -172,7 +187,7 @@ header {
     font-size: 1.2rem;
   }
   .zombie {
-    width: 15rem;
+    width: 10rem;
     right: 0;
   }
 }
