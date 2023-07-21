@@ -23,11 +23,12 @@ header {
   top: 0;
   width: 100%;
   background-color: #111;
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
+  z-index: 5;
 }
 
 .links-container {
@@ -57,7 +58,14 @@ header {
   max-width: 85vw;
   height: 100vh;
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.hero-shapes {
+  position: absolute;
+  bottom: 20px;
+  width: 10rem;
 }
 
 .hero__title_container {
@@ -117,8 +125,15 @@ header {
   min-height: 70vh;
 }
 
+.shapes-cards {
+  position: absolute;
+  right: 5rem;
+  top: 2rem;
+}
+
 .card__title {
   font-size: 2rem;
+  z-index: 2;
 }
 
 .cards-container {
@@ -127,6 +142,7 @@ header {
   gap: 1.5rem;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 .card {
@@ -137,15 +153,16 @@ header {
   width: 20%;
   gap: 20px;
   padding: 1.5rem;
-  background-color: #c1c1c1;
-  color: black;
+  background-color: #2a2a2a;
+  color: #efefef;
   text-align: center;
   border-radius: 7px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.6);
 }
 
 .card h3 {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1px;
 }
 
@@ -161,7 +178,8 @@ header {
 }
 
 .logo-card {
-  background-color: #3c3c89ff;
+  background: linear-gradient(to right, rgb(64, 64, 93), rgb(142, 37, 142));
+  /* background-color: #3c3c89ff; */
   padding: 0.5rem;
   border-radius: 3rem;
 }
@@ -205,6 +223,7 @@ header {
   width: 20rem;
 }
 
+
 /* animaciones */
 
 @media only screen and (max-width: 481px) {
@@ -220,6 +239,10 @@ header {
     gap: 15px;
   }
 
+  .hero-shapes {
+    opacity: 0.05;
+  }
+
   .hero__title_container p {
     font-size: 1.2rem;
     width: 95%;
@@ -232,9 +255,13 @@ header {
   }
 
   .zombie-cards {
-    left: -2rem;
+    left: 1rem;
     bottom: -5rem;
     width: 10rem;
+  }
+
+  .card-section {
+    padding-bottom: 16rem;
   }
 
   .cards-container {
@@ -242,9 +269,14 @@ header {
     justify-content: center;
     align-items: center;
   }
-
+  .shapes-cards {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+  }
   .card {
-   width: 75%;
+    width: 75%;
   }
 
   .card h3 {
@@ -278,7 +310,6 @@ header {
     width: 10rem;
     right: 0;
     z-index: -1;
-    opacity: 1;
   }
 }
 
@@ -294,14 +325,27 @@ header {
     font-size: 1.2rem;
     width: 95%;
   }
-  
+
   .lata {
     max-width: 15rem;
   }
+
+  .shapes-cards {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+    opacity: 0.2;
+  }
+
   .zombie-cards {
-    left: -2rem;
+    left: 1rem;
     bottom: -5rem;
     width: 10rem;
+  }
+
+  .card-section {
+    padding-bottom: 16rem;
   }
 
   .cards-container {
@@ -311,7 +355,7 @@ header {
   }
 
   .card {
-   width: 75%;
+    width: 75%;
   }
 
   .card h3 {
