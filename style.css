@@ -197,7 +197,7 @@ header {
 }
 
 .cards-container h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .products-container {
@@ -318,7 +318,6 @@ header {
   }
 
   .product {
-    width: 20rem;
     padding: 1rem;
   }
 
