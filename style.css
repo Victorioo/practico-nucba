@@ -88,7 +88,7 @@ header {
   width: 75%;
 }
 
-.lata {
+.zombie-hero {
   width: 35rem;
 }
 
@@ -112,7 +112,7 @@ header {
 
 /* cards */
 
-.card-section {
+.benefits-section {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -125,18 +125,18 @@ header {
   min-height: 70vh;
 }
 
-.shapes-cards {
+.shapes-benefits {
   position: absolute;
   right: 5rem;
   top: 2rem;
 }
 
-.card__title {
+.benefit__title {
   font-size: 2rem;
   z-index: 2;
 }
 
-.cards-container {
+.benefits-container {
   display: flex;
   flex-flow: row wrap;
   gap: 1.5rem;
@@ -145,7 +145,7 @@ header {
   z-index: 2;
 }
 
-.card {
+.benefit {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -160,24 +160,24 @@ header {
   border-bottom: 3px solid rgba(255, 255, 255, 0.6);
 }
 
-.card h3 {
+.benefit h3 {
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 1px;
 }
 
-.card p {
+.benefit p {
   font-weight: 400;
 }
 
-.zombie-cards {
+.zombie-benefits {
   position: absolute;
-  bottom: -1rem;
+  bottom: 0;
   left: 0rem;
   width: 13rem;
 }
 
-.logo-card {
+.logo-benefit {
   background: linear-gradient(to right, rgb(64, 64, 93), rgb(142, 37, 142));
   /* background-color: #3c3c89ff; */
   padding: 0.5rem;
@@ -186,8 +186,7 @@ header {
 
 /* About */
 
-.about-container {
-  position: relative;
+.cards-container {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -196,35 +195,55 @@ header {
   color: white;
 }
 
-.about {
+.products-container {
   display: flex;
-  flex-flow: column wrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 70vw;
+  margin: 2rem 0;
+  padding: 0 1rem;
+  gap: 20px;
+}
+
+.product {
+  display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  max-width: 55%;
+  width: 15rem;
+  background-color: rgba(40, 40, 40, 0.477);
+  color: #cdcdcd;
+  padding: 1rem;
+  border-radius: 10px;
   text-align: center;
-  height: 70vh;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.437);
+  transition: border-radius 350ms, background-color 150ms;
+  gap: 5px;
+}
+
+.product:hover {
+  background-color: rgba(40, 40, 40, 0.65);
+  border-radius: 22px;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  color: rgb(248, 248, 248);
+  font-weight: 500;
+}
+
+.product h4 {
+  font-weight: 400;
+  color: gray;
+}
+
+.product-img {
+  width: 12rem;
+  border-radius: 3rem;
+  transition: border-radius 300ms;
   padding: 10px;
 }
-
-.about h1 {
-  font-size: 3.5rem;
-}
-
-.about p {
-  font-size: 1.2rem;
-}
-
-.zombie {
-  position: absolute;
-  right: 1rem;
-  bottom: 0;
-  width: 20rem;
-}
-
-
-/* animaciones */
 
 @media only screen and (max-width: 481px) {
   header {
@@ -250,49 +269,58 @@ header {
   .hero__title {
     font-size: 3rem;
   }
-  .lata {
+
+  .zombie-hero {
     max-width: 15rem;
   }
 
-  .zombie-cards {
-    left: 1rem;
-    bottom: -5rem;
+  .zombie-benefits {
+    left: 0rem;
+    bottom: -2px;
     width: 10rem;
   }
 
-  .card-section {
+  .benefits-section {
     padding-bottom: 16rem;
   }
 
-  .cards-container {
+  .benefits-container {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
   }
-  .shapes-cards {
+  .shapes-benefits {
     position: absolute;
     right: 0;
     top: 0;
     display: none;
   }
-  .card {
+  .benefit {
     width: 75%;
   }
 
-  .card h3 {
+  .benefit h3 {
     font-size: 1.2rem;
   }
-  .card p {
+  .benefit p {
     font-size: 0.9rem;
   }
 
-  .lata {
+  .products-container {
+    max-width: 90vw;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .product {
+    width: 20rem;
+    padding: 1rem;
+  }
+
+  .zombie-hero {
     width: 15rem;
   }
-  .section {
-    justify-content: start;
-    height: 85vh;
-  }
+
   .about {
     max-width: 100%;
     z-index: 1;
@@ -326,11 +354,11 @@ header {
     width: 95%;
   }
 
-  .lata {
+  .zombie-hero {
     max-width: 15rem;
   }
 
-  .shapes-cards {
+  .shapes-benefits {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -338,40 +366,44 @@ header {
     opacity: 0.2;
   }
 
-  .zombie-cards {
-    left: 1rem;
-    bottom: -5rem;
+  .zombie-benefits {
+    left: -.5rem;
+    bottom: -2px;
     width: 10rem;
   }
 
-  .card-section {
+  .benefits-section {
     padding-bottom: 16rem;
   }
 
-  .cards-container {
+  .benefits-container {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
   }
 
-  .card {
+  .benefit {
     width: 75%;
   }
 
-  .card h3 {
+  .benefit h3 {
     font-size: 1.2rem;
   }
-  .card p {
+  .benefit p {
     font-size: 0.9rem;
   }
 
-  .lata {
+  .products-container {
+    max-width: 90vw;
+    justify-content: center;
+  }
+
+  .zombie-hero {
     width: 15rem;
   }
 
   .section {
     justify-content: start;
-    height: 90vh;
   }
 
   .about {
@@ -392,26 +424,33 @@ header {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .cards-container {
+  .zombie-hero {
+    width: 15rem;
+  }
+
+  .benefits-container {
     align-items: stretch;
   }
 
-  .card h3 {
+  .benefit h3 {
     font-size: 1.2rem;
   }
-  .card p {
+  .benefit p {
     font-size: 0.9rem;
   }
 
-  .zombie-cards {
+  .zombie-benefits {
     position: absolute;
-    bottom: -3rem;
+    bottom: 0;
     left: 0rem;
     width: 10rem;
   }
-  .lata {
-    width: 15rem;
+
+  .products-container {
+    max-width: 100vw;
+    justify-content: center;
   }
+
   .zombie {
     width: 15rem;
     right: 0;

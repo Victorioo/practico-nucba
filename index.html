@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>.</title>
+    <title>ZZombie - ENERGY</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon" />
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
   </head>
   <body>
     <header>
       <div>
-        <img src="https://via.placeholder.com/70x70" alt="" />
+        <img src="./logo.png" width="50"/>
       </div>
       <nav>
         <ul class="links-container">
@@ -23,7 +23,7 @@
     <main>
       <!--  HERO SECTION <-- -->
       <section class="hero-section">
-        <img src="./assets/hero/shape.svg" width="250" class="hero-shapes">
+        <img src="./assets/hero/shape.svg" width="250" class="hero-shapes" />
         <div class="hero">
           <div class="hero__title_container">
             <h1 class="hero__title">ENERGY DRINK</h1>
@@ -34,16 +34,24 @@
             </p>
             <button class="button-hero">CLICK HERE</button>
           </div>
-          <img src="./assets/hero.svg" class="lata" />
+          <img src="./assets/zombie/zombie-hero.svg" class="zombie-hero" />
         </div>
       </section>
-
-      <section class="card-section">
-        <img src="./assets/card/shapes.svg" width="150" class="shapes-cards">
-        <h1 class="card__title">Todo lo que necesitas!</h1>
-        <div class="cards-container">
-          <div  class="card">
-            <img src="./assets/card/light.svg" width="75" class='logo-card'>
+      <!-- CARDS SECTIONS -->
+      <section class="benefits-section">
+        <img
+          src="./assets/benefits/shapes.svg"
+          width="150"
+          class="shapes-benefits"
+        />
+        <h1 class="benefit__title">Todo lo que necesitas!</h1>
+        <div class="benefits-container">
+          <div class="benefit">
+            <img
+              src="./assets/benefits/light.svg"
+              width="75"
+              class="logo-benefit"
+            />
             <h3>Rapidez en el pedido</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
@@ -51,8 +59,12 @@
             </p>
           </div>
 
-          <div class="card">
-            <img src="./assets/card/buy-box.svg" width="75" class='logo-card'>
+          <div class="benefit">
+            <img
+              src="./assets/benefits/buy-box.svg"
+              width="75"
+              class="logo-benefit"
+            />
             <h3>Variedad de pedidos</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -60,35 +72,93 @@
             </p>
           </div>
 
-          <div class="card">
-            <img src="./assets/card/premiumquality.svg" width="75" class='logo-card'>
+          <div class="benefit">
+            <img
+              src="./assets/benefits/premiumquality.svg"
+              width="75"
+              class="logo-benefit"
+            />
             <h3>Calidad premium</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Distinctio, voluptas.
             </p>
           </div>
-
         </div>
-        <img src="./assets/zombie-card2.svg" width="300" class="zombie-cards">
+        <img
+          src="./assets/zombie/zombie-card2.svg"
+          width="300"
+          class="zombie-benefits"
+        />
         <!-- <img src="./assets/zombie-card.svg" width="100" class="zombie-cards"> -->
       </section>
 
-      <section class="about-container section">
-        <div class="about">
-          <h1>Acerca de</h1>
-          <p>
-            Bienvenidos a ZZZombie, tu destino número uno para todo tipo de
-            bebidas energéticas en Argentina. Somos una PYME apasionada y
-            comprometida con brindarte una amplia selección de bebidas que te
-            llenarán de energía y te ayudarán a mantener tu ritmo de vida activo
-            y vibrante.
-          </p>
-          <img
-            src="./assets/zombie.svg"
-            alt="zombie-señalando"
-            class="zombie"
-          />
+      <section class="cards-container section">
+        <h1>Nuestros Productos</h1>
+        <div class="products-container">
+          <div class="product">
+            <img
+              src="./assets/products/redbull-transformed.png"
+              class="product-img"
+            />
+            <h1 class="product-title">Red Bull 355ml</h1>
+            <h4>$500</h4>
+          </div>
+
+          <div class="product">
+            <img
+              src="./assets/products/speed-transformed.png"
+              class="product-img"
+            />
+            <h1 class="product-title">Speed 473Ml</h1>
+            <h4>$500</h4>
+          </div>
+
+          <div class="product">
+            <img
+              src="./assets/products/monster-transformed.png"
+              class="product-img"
+            />
+            <h1 class="product-title">Monster 473Ml</h1>
+            <h4>$500</h4>
+          </div>
+
+          <div class="product">
+            <img
+              src="./assets/products/monster-ml-transformed.png"
+              class="product-img"
+            />
+            <h1 class="product-title">Monster Mango Loco 473Ml</h1>
+            <h4>$500</h4>
+          </div>
+
+          <div class="product">
+            <img
+              src="./assets/products/monster-eu-transformed.png"
+              class="product-img"
+            />
+            <h1 class="product-title">Monster Ultra Energy 473ml</h1>
+            <h4>$500</h4>
+          </div>
+
+          <div class="product">
+            <img
+              src="./assets/products/monster-sr-transformed.png"
+              class="product-img"
+            />
+            <h1 class="product-title">Monster Ultra Sunrise 473ml</h1>
+            <h4>$500</h4>
+          </div>
+
+          <div class="product">
+            <img
+              src="./assets/products/monster-vr-transformed.png"
+              class="product-img"
+            />
+            <h1 class="product-title">Monster THE DOCTOR 473Ml</h1>
+            <h4>$500</h4>
+          </div>
+
         </div>
       </section>
     </main>
